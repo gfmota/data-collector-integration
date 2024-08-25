@@ -1,0 +1,9 @@
+[submodule "austrian-geosphere-data-collector"]
+	path = austrian-geosphere-data-collector
+	url = git@github.com:gfmota/austrian-geosphere-data-collector.git
+[submodule "ingest-service"]
+	path = ingest-service
+	url = git@github.com:gfmota/ingest-service.git
+[submodule "metadata-service"]
+	path = metadata-service
+	url = git@github.com:gfmota/metadata-service.git

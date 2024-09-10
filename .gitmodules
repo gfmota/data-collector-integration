@@ -7,3 +7,6 @@
 [submodule "metadata-service"]
 	path = metadata-service
 	url = git@github.com:gfmota/metadata-service.git
+[submodule "orchestrator"]
+	path = orchestrator
+	url = git@github.com:gfmota/orchestrator.git

@@ -23,6 +23,13 @@ sleep 10
 ./gradlew bootRun >> ../log/austrian-geosphere-data-collector.log &
 PID3=$!
 
+cd ../orchestrator
+git pull
+> ../log/orchestrator.log
+sleep 10
+./gradlew bootRun >> ../log/orchestrator.log &
+PID4=$!
+
 cd ..
 
 # Function to stop both applications on exit
@@ -31,6 +38,7 @@ function cleanup {
   kill $PID1
   kill $PID2
   kill $PID3
+  kill $PID4
   docker-compose -f $COMPOSE_FILE down
 }
 
@@ -41,3 +49,4 @@ trap cleanup EXIT
 wait $PID1
 wait $PID2
 wait $PID3
+wait $PID4
